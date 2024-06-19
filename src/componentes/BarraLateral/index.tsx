@@ -1,0 +1,55 @@
+import { styled } from "styled-components"
+import ItemNavegacao from "./ItemNavegacao"
+import React from "react"
+
+
+const ListaEstilizada = styled.ul`
+    list-style: none;
+    padding: 0 20px;
+    margin: 0;
+    width: 212px;
+`
+
+
+const BarraLateral = () => {
+    return (
+        <aside>
+            <nav>
+                <ListaEstilizada>
+                    <ItemNavegacao
+                        iconeAtivo="././public/icones/home-ativo.png"
+                        iconeInativo="././public/icones/home-inativo.png"
+                        ativo={true}>
+                        
+                        Início
+                    </ItemNavegacao>
+                    <ItemNavegacao
+                        iconeAtivo="././public/icones/mais-vistas.png"
+                        iconeInativo="././public/icones/mais-vistas-inativo.png">
+                        Mais vistas
+                    </ItemNavegacao>
+                    <ItemNavegacao
+                        iconeAtivo="././public/icones/mais-curtidas.png"
+                        iconeInativo="././public/icones/mais-curtidas-inativo.png">
+                        Mais curtidas
+                    </ItemNavegacao>
+                    <ItemNavegacao
+                        iconeAtivo="././public/icones/novas.png"
+                        iconeInativo="././public/icones/novas-inativo.png">
+                        Novas
+                    </ItemNavegacao>
+                    <ItemNavegacao
+                        iconeAtivo="././public/icones/surpreenda-me.png"
+                        iconeInativo="././public/icones/surpreenda-me-inativo.png">
+                        Surpreenda-me
+                    </ItemNavegacao>
+                </ListaEstilizada>
+            </nav>
+        </aside>
+        
+    )
+
+
+}
+
+export default BarraLateral
