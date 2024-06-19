@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const BannerEstilizado = styled.div`
-    background-image: url('././public/imagens/banner.png');
+    background-image: ${props => `url(${props.$backgroundImage})`};
     background-position: center center;
     background-size: cover;
     width: 100%;
@@ -25,9 +25,9 @@ const TituloEstilizado = styled.h1`
 `
 
 
-const banner = () => {
+const banner = ({ backgroundImage }) => {
     return(
-        <BannerEstilizado>
+        <BannerEstilizado $backgroundImage={backgroundImage}>
             <TituloEstilizado>
                 A Galeria mais<br/> completa de<br/> fotos do espaço!
             </TituloEstilizado>        

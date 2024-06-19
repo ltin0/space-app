@@ -7,7 +7,7 @@ import Galeria from "./componentes/Galeria"
 import fotos from "./fotos.json"
 import { useState, useEffect } from "react"
 import ModalZoom from "./componentes/ModalZoom"
-
+import bannerBackground from '../public/imagens/banner.png'
 
 const AppContainer = styled.div`
   width: 1640px;
@@ -72,7 +72,9 @@ const App = () => {
         <MainContainer>
           <BarraLateral></BarraLateral>
           <ConteudoGaleria>
-            <Banner></Banner>
+            <Banner
+             backgroundImage={bannerBackground}
+            ></Banner>
             <Galeria
               aoFotoSelecionada={foto => setFotoSelecionada(foto)}
               aoAlternarFavorito={aoAlternarFavorito}
